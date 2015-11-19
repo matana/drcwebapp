@@ -26,8 +26,8 @@
 			<div class="span6 well lead">
 				<h3 th:text="${volume.title}">Band ...</h3>
 				<h4 class="nav-header">Wählen Sie ein Kapitel:</h4>
-				<ul class="nav nav-list" th:each="chapter, status : ${chapters}">
-					<li><small><span
+				<ul class="nav nav-list">
+					<li th:each="chapter, status : ${chapters}"><small><span
 							th:text="${status.index + 1} + ' - ' "></span><a
 							th:href="@{pages(chapterId=${chapter.id}, chapterTitle=${chapter.title}, volumeId=${volume.id}, volumeTitle=${volume.title})}"
 							th:text="${chapter.title}"></a></small></li>

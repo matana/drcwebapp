@@ -28,8 +28,8 @@
 			<div class="span6 well lead">
 				<h3>Rätoromanische Chrestomathie</h3>
 				<h4 class="nav-header">Wählen Sie einen Band:</h4>
-				<ul class="nav nav-list" th:each="volume : ${volumes}">
-					<li>
+				<ul class="nav nav-list" >
+					<li th:each="volume : ${volumes}">
 						<a th:href="@{chapters(volumeId=${volume.id})}" th:text="${volume.title}"></a>
 					</li>
 				</ul>

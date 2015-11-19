@@ -13,5 +13,7 @@ public interface ChapterRepository extends CrudRepository<Chapter, String> {
 	public List<Chapter> findByUserId(String userId);
 	
 	public List<Chapter> findByVolumeId(String volumeId);
+	
+	public List<Chapter> findByTitleAndUserId(String title, String userId);
 
 }

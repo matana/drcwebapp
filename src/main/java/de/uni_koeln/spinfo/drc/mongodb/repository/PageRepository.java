@@ -2,7 +2,6 @@ package de.uni_koeln.spinfo.drc.mongodb.repository;
 
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.Repository;
 
 import de.uni_koeln.spinfo.drc.mongodb.data.document.Page;
@@ -28,5 +27,7 @@ public interface PageRepository extends Repository<Page, String> {
 	public String findOne(String pageId);
 	
 	public Page findByPageId(String pageId);
+	
+	public List<Page> findByRange(int from, int to);
 
 }

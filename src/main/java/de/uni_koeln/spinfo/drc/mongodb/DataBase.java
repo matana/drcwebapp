@@ -42,11 +42,9 @@ public class DataBase {
 	@Inject
 	public DataBase(MongoRepositoryFactory dbFactory, MongoTemplate mongoTemplate) {
 		this.mongoTemplate = mongoTemplate;
-		//this.pageRepository = dbFactory.getRepository(PageRepository.class);
 		this.chapterRepository = dbFactory.getRepository(ChapterRepository.class);
 		this.LanguageRepository = dbFactory.getRepository(LanguageRepository.class);
 		this.volumeRepository = dbFactory.getRepository(VolumeRepository.class);
-		//this.wordRepository = dbFactory.getRepository(WordRepository.class);
 	}
 
 	public MongoTemplate getMongoTemplate() {

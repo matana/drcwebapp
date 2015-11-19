@@ -25,9 +25,18 @@ public class VolumeController {
 	public ModelAndView getVolumes() {
 		
 		ModelAndView mv = new ModelAndView(Constans.VOLUMES);
+		
 		mv.addObject("volumes", db.getVolumeRepository().findAll());
 		
 		return mv;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
